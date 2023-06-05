@@ -1,0 +1,411 @@
+{
+    "player": {
+        "name": "Frank",
+        "health": 100,
+        "power": 70,
+        "armor": 40,
+        "fuel": 150,
+        "gold": 100,
+        "location": "Earth",
+        "items": []
+    },
+    "help": [
+        "This is a help page with all commands available throughout the game:\n",
+        "info   ~ show info about player (statistics, inventory, etc)",
+        "status ~ show info about current mission and player statistics",
+        "look   ~ look around, show people, enemies, and objects nearby\n",
+        "hint   ~ show a hint about current mission's goal",
+        "shop   ~ if possible go to the shop on current planet\n",
+        "fly <planet_name>     ~ if possible travel to given planet ",
+        "take <item_name>      ~ if possible pick up a given item ",
+        "talk <person's_name>  ~ if possible talk to a given person",
+        "attack <enemy's_name> ~ if possible fight your enemy\n",
+        "help   ~ get this help page with all available commands",
+        "save (or 's')  ~ save a game status to keep your progress",
+        "exit (or 'e')  ~ exit game - without saving!"
+    ],
+    "map": {
+        "locations": [
+            [       "",       "",      "",    "",       "",       "",     ""],
+            [       "",       "",      "",    "","Mercury",       "",     ""],
+            [       "","Neptune",      "","Mars",       "","Jupiter",     ""],
+            [       "",       "","Saturn",    "",  "Earth",       "",     ""],
+            [       "", "Uranus",      "",    "",       "",  "Venus",     ""],
+            [       "",       "",      "",    "",       "",       "",     ""]
+        ]
+    },
+    "planets": {
+        "Mercury": {
+            "description": "With conditions as extreme as these, the chances of sustaining life on this planet are virtually none-existent.",
+            "missions": ["El4"],
+            "stores": []
+        },
+        "Venus": {
+            "description": "Hot, sweaty, firery and sometimes called the goddess of love.",
+            "missions": ["El3"],
+            "stores": []
+        },
+        "Earth": {
+            "description": "From heart of fire to white capped peaks, Earth is mother and home.",
+            "missions": ["Tut1","Tut2","Tut3","Earth1","Earth2","Earth3","Earth4","Earth5"],
+            "stores": ["earth_store"]
+        },
+        "Mars": {
+            "description": "Mars, in quiet rocky patience, welcomes the feet of our lander.",
+            "missions": ["Mars1","El5"],
+            "stores": ["gas_station"]
+        },
+        "Jupiter": {
+            "description": "The biggest planet in our solar system, it has a big red spot biger than earth",
+            "missions": ["El2"],
+            "stores": []
+        },
+        "Saturn": {
+            "description": "Saturn rests in starlit bed amid its rocky rings.",
+            "missions": ["Saturn1","Saturn2"],
+            "stores": []
+        },
+        "Uranus": {
+            "description": "jsfdnklgfnoq",
+            "missions": ["Uranus1"],
+            "stores": ["Uranus_gas_station"]
+        },
+        "Neptune": {
+            "description": "jsfdnklgfnoq",
+            "missions": ["El1"],
+            "stores": ["neptune_store"]
+        }
+    },
+    "missions":
+    {
+		"Tut1": {
+            "description": "Father: \nIf you want to become a bounty hunter my son, \nyou will need something to fly. Take my old ship. \nConsider it as a farewell gift from your old man.",
+            "items": ["Spaceship"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Take Winnebago spaceship",
+            "required" : ["Spaceship"]
+        },
+		"Tut2": {
+            "description": "Now go to say goodbye to your Mother.",
+            "items": [],
+            "npc": ["Tu1"],
+            "enemies": [],
+            "reward": 0,
+            "help": "Talk to your Mother",
+            "required" : []
+        },
+		"Tut3": {
+            "description": "Learn how to buy items and fuel. \nGo to shop to buy fuel and Astral Barrel Bombs ",
+            "items": [],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Go to shop to buy fuel and Astral Barrel Bombs",
+            "required" : ["Bomb"]
+        },
+
+        "Earth1": {
+            "description": "You have landed on planet Earth in order to join a bounty hunting guild.",
+            "items": [],
+            "npc": ["Eth0"],
+            "enemies": [],
+            "reward": 0,
+            "help": "Talk to William",
+            "required" : ["Teleprop1"]
+        },
+        "Mars1": {
+            "description": "Welcome in Titanus the first Colony on Mars.",
+            "items": ["small_gas_tank"],
+            "npc": ["Mrs1"],
+            "enemies": [],
+            "reward": 100,
+            "help": "Talk to Elijah",
+            "required" : ["Teleprop1"]
+        },
+        "Saturn1": {
+            "description": "You are now on Saturn's orbite.",
+            "items": ["Teleprop1"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find the Teleprop",
+            "required" : ["Sack_of_gold"]
+        },
+        "Earth2": {
+            "description": "Now you are ready for something bigger.",
+            "items": ["Sack_of_gold"],
+            "npc": ["Eth1"],
+            "enemies": [],
+            "reward": 200,
+            "help": "Contact with King Roland",
+            "required" : ["Princess_Vespa"]
+        },
+        "Saturn2": {
+            "description": "You are now on Saturn's orbite. Defense yourself from Spaceball One",
+            "items": [],
+            "npc": [],
+            "enemies": ["Sat1"],
+            "reward": 0,
+            "help": "",
+            "required" : []
+        },
+        "Uranus1": {
+            "description": "You are now on Uranus's station. Find Princess Vespa",
+            "items": ["Princess_Vespa"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find Princess Vespa",
+            "required" : []
+        },
+		"Earth3": {
+            "description": "You have received your promised reward \nbut we don't have time to celebrate. \nThe president calls you.",
+            "items": [],
+            "npc": ["Eth2"],
+            "enemies": [],
+            "reward": 0,
+            "help": "",
+            "required" : ["Ele1","Ele2","Ele3","Ele4","The_Fifth_Element"]
+        },
+		"El1": {
+            "description": "Find four Stones and The Girl",
+            "items": ["Ele1"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find  four Stones",
+            "required" : []
+        },
+		"El2": {
+            "description": "Find four Stones and The Girl",
+            "items": ["Ele2"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find four Stones and The Girl",
+            "required" : []
+        },
+		"El3": {
+            "description": "Find four Stones and The Girl",
+            "items": ["Ele3"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find four Stones and The Girl",
+            "required" : []
+        },
+		"El4": {
+            "description": "Find four Stones and The Girl",
+            "items": ["Ele4"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find four Stones and The Girl",
+            "required" : []
+        },
+		"El5": {
+            "description": "Find four Stones and The Girl",
+            "items": ["The_Fifth_Element"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "Find four Stones and The Girl",
+            "required" : []
+        },
+		"Earth4": {
+            "description": "Take The Weapon asembled from the five elements and destroy the fireball that threatens our world.",
+            "items": ["The_Weapon"],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "",
+            "required" : ["The_Weapon"]
+        },
+		"Earth5": {
+            "description": "\"Wind blows, fire burns, rain falls...\" \nwith this clue, given by Leeloo, you have managed \nto open four stones and launch The Weapon. You have also convinced Leeloo that our world is worth saving, \nby telling her what love means and revealing your feelings to her. \nThen She blast with the light of power and destroy incoming fireball. \nCongratulation! You have saved the world. \nEveryone is happy and thanks you. You are tired but you get the girl. blah blah blah \nTHE END",
+            "items": [],
+            "npc": [],
+            "enemies": [],
+            "reward": 0,
+            "help": "",
+            "required" : []
+        }
+    },
+    "characters": {
+        "Eth0": {
+            "id" : "Eth0",
+            "name": "William",
+            "dialog": ["Welcome Adventurer! \nWe're glad, you've decided to join our bounty hunting guild. \nI hope we will make tons of money together. \nGo talk to Elijah. He has a first job for you. \nI think You'll find him in Titanus Colony on Mars"]
+        },
+        "Eth1": {
+            "id" : "Eth1",
+            "name": "King Roland",
+            "dialog": ["Oh God, my savior! You need to help me. My only daughter, Princess Vespa is in great danger. She abandoned her wedding and fled the family planet. Now the Dark Helmet is after her. You need to retrieve her before he catch her. Take this gold to gear up for big fight with Dark Helmet."]
+        },
+		"Eth2": {
+            "id" : "Eth2",
+            "name": "President Lindberg",
+            "dialog": ["We have a situation right now! Priest Vito Cornelius told us \nabout giant living fireball heading towards the Earth. The only chance for us, is to find \nfive elements of the only weapon capable of defeating that thing."]
+        },
+        "Mrs1": {
+            "id" : "Mrs1",
+            "name": "Elijah",
+            "dialog":	["Hello! \nWilliam told me about you. \nI have a first task for you. \nYou will fly to Saturn's orbit and find lastly lost Teleprop. \nBe carefull to not run out fuel. Take this small barrel of my original rocket fuel"]
+        },
+        "Mrs2": {
+            "id" : "Mrs2",
+            "name": "Vito Cornelius",
+            "dialog": []
+        },
+        "Sat1": {
+            "id" : "Sat1",
+            "name": "Spaceball",
+            "reward": 100,
+            "health": 100,
+            "power": 50,
+            "armor": 50,
+            "quantity" : 1
+        },
+		"Tu1": {
+            "id" : "Tu1",
+            "name": "Mother",
+            "dialog": ["Do you really need to fly away, that young? What if something happen to you? Who will be cooking for you? Do you even have fuel?"]
+        }
+    },
+    "stores": {
+        "earth_store": {
+            "name" : "Local Shop",
+            "description": "This is the first shop in the universe.",
+            "items": ["Bomb", "Beer", "small_gas_tank", "Spistol"]
+
+        },
+        "neptune_store":{
+            "name" : "Bob's Shop",
+            "description": "The coldest store in the universe.",
+            "items": []
+
+        },
+        "gas_station": {
+            "name" : "Gas Station",
+            "description": "This is the first gas in the universe.",
+            "items": ["small_gas_tank", "medium_gas_tank", "huge_gas_tank", "Beer"]
+        },
+        "Uranus_gas_station": {
+            "name" : "Gas Station for cargo ships",
+            "description": "This is industrial gas station for big cargo ships. Only huge fuel tanks available.",
+            "items": ["huge_gas_tank"]
+        }
+    },
+    "items": {
+        "small_gas_tank": {
+            "id" : "small_gas_tank",
+            "name": "Small Fuel Tank",
+            "price": 15,
+            "fuel" : 30
+        },
+        "medium_gas_tank": {
+            "id" : "medium_gas_tank",
+            "name": "Medium Fuel Tank",
+            "price": 30,
+            "fuel" : 60
+        },
+        "huge_gas_tank": {
+            "id" : "huge_gas_tank",
+            "name": "Huge Fuel Tank",
+            "price": 50,
+            "fuel" : 100
+        },
+        "Beer": {
+            "id" : "Beer",
+			"inventory" : true,
+            "name": "Pint of galactic beer",
+            "price": 50,
+            "health" : 100
+        },
+        "Teleprop1" : {
+            "inventory" : true,
+            "id" : "Teleprop1",
+            "name": "Teleprop",
+            "price": 0
+        },
+        "Bomb": {
+            "id" : "Bomb",
+			"inventory" : true,
+            "name": "Astral Barrel Bomb",
+            "price": 15,
+            "power": 15
+        },
+        "The_Fifth_Element": {
+            "inventory" : true,
+            "id" : "The_Fifth_Element",
+            "name": "Leeloo",
+            "price": 0
+        },
+        "Cannon": {
+            "id" : "Cannon",
+			"inventory" : true,
+            "name": "Laser Cannon",
+            "price": 150,
+            "power": 100
+        },
+        "Sack_of_gold": {
+            "id" : "Sack_of_gold",
+            "name": "Sack of gold",
+            "gold": 200,
+            "fuel": 200
+        },
+        "Princess_Vespa": {
+            "inventory" : true,
+            "id" : "Princess_Vespa",
+            "name": "Princess Vespa",
+            "price": 0
+        },
+        "Spistol" : {
+            "inventory" : true,
+            "id" : "Spistol",
+            "name" : "Small Pistol",
+            "power": 15,
+            "price": 30
+        },
+		"Spaceship" : {
+            "inventory" : true,
+            "id" : "Spaceship",
+            "name" : "Spaceship",
+            "power": 50,
+			"health": 50
+        },
+		"Ele1" : {
+            "inventory" : true,
+            "id" : "Ele1",
+            "name" : "Water Stone",
+            "power": 15
+        },
+		"Ele2" : {
+            "inventory" : true,
+            "id" : "Ele2",
+            "name" : "Fire Stone",
+            "power": 15
+        },
+		"Ele3" : {
+            "inventory" : true,
+            "id" : "Ele3",
+            "name" : "Wind Stone",
+            "power": 15
+        },
+		"Ele4" : {
+            "inventory" : true,
+            "id" : "Ele4",
+            "name" : "Earth Stone",
+            "power": 15
+        },
+		"The_Weapon" : {
+            "inventory" : true,
+            "id" : "The_Weapon",
+            "name" : "The Weapon",
+            "power": 500,
+			"health": 500
+        }
+    }
+}
